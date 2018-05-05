@@ -48,12 +48,12 @@
       <property role="20lmBu" value="aggregation" />
       <property role="20kJfa" value="relations" />
       <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="7eX7ySID96a" resolve="ConceptRelation" />
+      <ref role="20lvS9" node="7eX7ySID96a" resolve="ConceptChildRelation" />
     </node>
   </node>
   <node concept="1TIwiD" id="7eX7ySID96a">
     <property role="EcuMT" value="8339855268659892618" />
-    <property role="TrG5h" value="ConceptRelation" />
+    <property role="TrG5h" value="ConceptChildRelation" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
     <node concept="1TJgyj" id="7eX7ySIFfJP" role="1TKVEi">
       <property role="IQ2ns" value="8339855268660444149" />
