@@ -1487,20 +1487,20 @@
         </node>
         <node concept="3mAFYk" id="7eX7ySIDvUb" role="1xLlFP">
           <property role="3m_KjL" value="Child (add target as)" />
-          <ref role="3m_WZM" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
-          <ref role="3m_MR0" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+          <ref role="3m_WZM" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
+          <ref role="3m_MR0" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
           <node concept="3mAF$r" id="7eX7ySIDvUd" role="3m_MS9">
             <node concept="3clFbS" id="7eX7ySIDvUf" role="2VODD2">
               <node concept="3cpWs8" id="7eX7ySIEFTc" role="3cqZAp">
                 <node concept="3cpWsn" id="7eX7ySIEFTf" role="3cpWs9">
                   <property role="TrG5h" value="cr" />
                   <node concept="3Tqbb2" id="7eX7ySIEFTa" role="1tU5fm">
-                    <ref role="ehGHo" to="8yb8:7eX7ySID96a" resolve="ConceptChildRelation" />
+                    <ref role="ehGHo" to="8yb8:7eX7ySID96a" resolve="AbstractConceptChildRelation" />
                   </node>
                   <node concept="2ShNRf" id="7eX7ySIEGiq" role="33vP2m">
                     <node concept="2fJWfE" id="7eX7ySIEGsM" role="2ShVmc">
                       <node concept="3Tqbb2" id="7eX7ySIEGsO" role="3zrR0E">
-                        <ref role="ehGHo" to="8yb8:7eX7ySID96a" resolve="ConceptChildRelation" />
+                        <ref role="ehGHo" to="8yb8:7eX7ySID96a" resolve="AbstractConceptChildRelation" />
                       </node>
                     </node>
                   </node>
@@ -1626,20 +1626,20 @@
         </node>
         <node concept="3mAFYk" id="JIGctjxUXg" role="1xLlFP">
           <property role="3m_KjL" value="Reference (add target as)" />
-          <ref role="3m_WZM" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
-          <ref role="3m_MR0" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+          <ref role="3m_WZM" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
+          <ref role="3m_MR0" to="tpce:h0PkWnZ" resolve="AbstractConceptDeclaration" />
           <node concept="3mAF$r" id="JIGctjxUXi" role="3m_MS9">
             <node concept="3clFbS" id="JIGctjxUXk" role="2VODD2">
               <node concept="3cpWs8" id="JIGctjxW_U" role="3cqZAp">
                 <node concept="3cpWsn" id="JIGctjxW_V" role="3cpWs9">
                   <property role="TrG5h" value="cr" />
                   <node concept="3Tqbb2" id="JIGctjxW_W" role="1tU5fm">
-                    <ref role="ehGHo" to="8yb8:JIGctjxDIR" resolve="ConceptReferenceRelation" />
+                    <ref role="ehGHo" to="8yb8:JIGctjxDIR" resolve="AbstractConceptReferenceRelation" />
                   </node>
                   <node concept="2ShNRf" id="JIGctjxW_X" role="33vP2m">
                     <node concept="2fJWfE" id="JIGctjxW_Y" role="2ShVmc">
                       <node concept="3Tqbb2" id="JIGctjxW_Z" role="3zrR0E">
-                        <ref role="ehGHo" to="8yb8:JIGctjxDIR" resolve="ConceptReferenceRelation" />
+                        <ref role="ehGHo" to="8yb8:JIGctjxDIR" resolve="AbstractConceptReferenceRelation" />
                       </node>
                     </node>
                   </node>
@@ -2131,7 +2131,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="7eX7ySID96j">
-    <ref role="1XX52x" to="8yb8:7eX7ySID96a" resolve="ConceptChildRelation" />
+    <ref role="1XX52x" to="8yb8:7eX7ySID96a" resolve="AbstractConceptChildRelation" />
     <node concept="2ZMJ7s" id="7eX7ySID96l" role="2wV5jI">
       <node concept="1PNbMa" id="7eX7ySID96n" role="1PN8q7">
         <node concept="23hSZX" id="7eX7ySID9Oi" role="ljJml">
@@ -2391,7 +2391,7 @@
     </node>
   </node>
   <node concept="24kQdi" id="JIGctjxDJl">
-    <ref role="1XX52x" to="8yb8:JIGctjxDIR" resolve="ConceptReferenceRelation" />
+    <ref role="1XX52x" to="8yb8:JIGctjxDIR" resolve="AbstractConceptReferenceRelation" />
     <node concept="2ZMJ7s" id="JIGctjxDWU" role="2wV5jI">
       <node concept="1PNbMa" id="JIGctjxDWV" role="1PN8q7">
         <node concept="23hSZX" id="JIGctjxDWW" role="ljJml">
@@ -2678,10 +2678,15 @@
           <node concept="3clFbF" id="JIGctj_S1m" role="3cqZAp">
             <node concept="37vLTI" id="JIGctj_Wui" role="3clFbG">
               <node concept="2OqwBi" id="JIGctj_S1o" role="37vLTJ">
-                <node concept="2OqwBi" id="JIGctj_S1p" role="2Oq$k0">
-                  <node concept="1Pxb5l" id="JIGctj_S1q" role="2Oq$k0" />
-                  <node concept="3TrEf2" id="JIGctj_S1r" role="2OqNvi">
-                    <ref role="3Tt5mk" to="8yb8:7eX7ySIFfJP" resolve="from" />
+                <node concept="1PxgMI" id="JIGctjD8Ex" role="2Oq$k0">
+                  <node concept="chp4Y" id="JIGctjD8LU" role="3oSUPX">
+                    <ref role="cht4Q" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+                  </node>
+                  <node concept="2OqwBi" id="JIGctj_S1p" role="1m5AlR">
+                    <node concept="1Pxb5l" id="JIGctj_S1q" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="JIGctj_S1r" role="2OqNvi">
+                      <ref role="3Tt5mk" to="8yb8:7eX7ySIFfJP" resolve="from" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3TrEf2" id="JIGctj_U7I" role="2OqNvi">
@@ -2734,10 +2739,15 @@
           <node concept="3clFbF" id="JIGctj_WBW" role="3cqZAp">
             <node concept="2OqwBi" id="JIGctj_ZQe" role="3clFbG">
               <node concept="2OqwBi" id="JIGctj_WBY" role="2Oq$k0">
-                <node concept="2OqwBi" id="JIGctj_WBZ" role="2Oq$k0">
-                  <node concept="1Pxb5l" id="JIGctj_WC0" role="2Oq$k0" />
-                  <node concept="3TrEf2" id="JIGctj_WC1" role="2OqNvi">
-                    <ref role="3Tt5mk" to="8yb8:7eX7ySIFfJP" resolve="from" />
+                <node concept="1PxgMI" id="JIGctjD9Ha" role="2Oq$k0">
+                  <node concept="chp4Y" id="JIGctjD9Lc" role="3oSUPX">
+                    <ref role="cht4Q" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+                  </node>
+                  <node concept="2OqwBi" id="JIGctj_WBZ" role="1m5AlR">
+                    <node concept="1Pxb5l" id="JIGctj_WC0" role="2Oq$k0" />
+                    <node concept="3TrEf2" id="JIGctj_WC1" role="2OqNvi">
+                      <ref role="3Tt5mk" to="8yb8:7eX7ySIFfJP" resolve="from" />
+                    </node>
                   </node>
                 </node>
                 <node concept="3Tsc0h" id="JIGctj_XTQ" role="2OqNvi">
