@@ -92,7 +92,7 @@
           <property role="gqqTZ" value="923.5265557344012" />
           <property role="gqqTW" value="371.7404852671709" />
           <property role="gqqTX" value="479.0" />
-          <property role="gqqTy" value="432.0" />
+          <property role="gqqTy" value="282.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -101,8 +101,8 @@
         <node concept="gqqVs" id="7eX7ySID95T" role="37mO4d">
           <property role="gqqTZ" value="30.995458802715856" />
           <property role="gqqTW" value="19.740485267170897" />
-          <property role="gqqTX" value="479.0" />
-          <property role="gqqTy" value="432.0" />
+          <property role="gqqTX" value="480.0" />
+          <property role="gqqTy" value="282.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -783,8 +783,8 @@
         <node concept="gqqVs" id="JIGctjAyDS" role="37mO4d">
           <property role="gqqTZ" value="797.0" />
           <property role="gqqTW" value="62.0" />
-          <property role="gqqTX" value="468.0" />
-          <property role="gqqTy" value="281.0" />
+          <property role="gqqTX" value="435.0" />
+          <property role="gqqTy" value="131.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -949,8 +949,8 @@
         <node concept="gqqVs" id="JIGctjBrli" role="37mO4d">
           <property role="gqqTZ" value="58.0" />
           <property role="gqqTW" value="522.7404852671709" />
-          <property role="gqqTX" value="468.0" />
-          <property role="gqqTy" value="281.0" />
+          <property role="gqqTX" value="446.0" />
+          <property role="gqqTy" value="131.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
@@ -1063,8 +1063,8 @@
         <node concept="gqqVs" id="JIGctjCYKP" role="37mO4d">
           <property role="gqqTZ" value="589.0" />
           <property role="gqqTW" value="824.0" />
-          <property role="gqqTX" value="468.0" />
-          <property role="gqqTy" value="281.0" />
+          <property role="gqqTX" value="446.0" />
+          <property role="gqqTy" value="131.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
         </node>
       </node>
