@@ -46,6 +46,13 @@
       <property role="20lbJX" value="0..n" />
       <ref role="20lvS9" node="JIGctjxS5K" resolve="ConceptRelation" />
     </node>
+    <node concept="1TJgyj" id="JIGctjBLgj" role="1TKVEi">
+      <property role="IQ2ns" value="859818949022258195" />
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="ifrelations" />
+      <property role="20lbJX" value="0..n" />
+      <ref role="20lvS9" node="JIGctjBrpn" resolve="InterfaceConceptExtendsRelation" />
+    </node>
   </node>
   <node concept="1TIwiD" id="7eX7ySID96a">
     <property role="EcuMT" value="8339855268659892618" />
@@ -118,6 +125,29 @@
       <property role="IQ2ns" value="859818949021642494" />
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="implRef" />
+      <ref role="20lvS9" to="tpce:h0PrWoo" resolve="InterfaceConceptReference" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="JIGctjBrpn">
+    <property role="EcuMT" value="859818949022168663" />
+    <property role="TrG5h" value="InterfaceConceptExtendsRelation" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="JIGctjBs3R" role="1TKVEi">
+      <property role="IQ2ns" value="859818949022171383" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="from" />
+      <ref role="20lvS9" to="tpce:h0PlHMJ" resolve="InterfaceConceptDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="JIGctjBs3T" role="1TKVEi">
+      <property role="IQ2ns" value="859818949022171385" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="to" />
+      <ref role="20lvS9" to="tpce:h0PlHMJ" resolve="InterfaceConceptDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="JIGctjBXOm" role="1TKVEi">
+      <property role="IQ2ns" value="859818949022309654" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="extRef" />
       <ref role="20lvS9" to="tpce:h0PrWoo" resolve="InterfaceConceptReference" />
     </node>
   </node>
