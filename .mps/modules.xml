@@ -4,6 +4,7 @@
     <projectModules>
       <modulePath path="$PROJECT_DIR$/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor.mpl" folder="" />
       <modulePath path="$PROJECT_DIR$/languages/com.dslfoundry.testlanguage/com.dslfoundry.testlanguage.mpl" folder="" />
+      <modulePath path="$PROJECT_DIR$/solutions/com.dslfoundry.graphicalstructureeditor.build/com.dslfoundry.graphicalstructureeditor.build.msd" folder="" />
     </projectModules>
   </component>
 </project>
