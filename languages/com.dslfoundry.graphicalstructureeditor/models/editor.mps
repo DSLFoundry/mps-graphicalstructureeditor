@@ -25,7 +25,7 @@
     <import index="mhbf" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.model(MPS.OpenAPI/)" />
     <import index="nkm5" ref="r:095345ad-6627-42ca-9d3f-fc1b2d9fbd61(de.itemis.mps.editor.diagram.runtime.model)" />
     <import index="mhfm" ref="3f233e7f-b8a6-46d2-a57f-795d56775243/java:org.jetbrains.annotations(Annotations/)" />
-    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" />
     <import index="wyt6" ref="6354ebe7-c22a-4a0f-ac54-50b52ab9b065/java:java.lang(JDK/)" implicit="true" />
     <import index="8yb8" ref="r:cccdccf1-96f9-47b0-b864-28dd59f57728(com.dslfoundry.graphicalstructureeditor.structure)" implicit="true" />
     <import index="c17a" ref="8865b7a8-5271-43d3-884c-6fd1d9cfdd34/java:org.jetbrains.mps.openapi.language(MPS.OpenAPI/)" implicit="true" />
@@ -366,6 +366,7 @@
         <child id="6733348108486823193" name="leftExpression" index="1m5AlR" />
         <child id="3906496115198199033" name="conceptArgument" index="3oSUPX" />
       </concept>
+      <concept id="8866923313515890008" name="jetbrains.mps.lang.smodel.structure.AsNodeOperation" flags="nn" index="FGMqu" />
       <concept id="1143234257716" name="jetbrains.mps.lang.smodel.structure.Node_GetModelOperation" flags="nn" index="I4A8Y" />
       <concept id="1143235216708" name="jetbrains.mps.lang.smodel.structure.Model_CreateNewNodeOperation" flags="nn" index="I8ghe">
         <reference id="1143235391024" name="concept" index="I8UWU" />
@@ -1484,7 +1485,7 @@
           </node>
         </node>
         <node concept="3mAFYk" id="7eX7ySIDvUb" role="1xLlFP">
-          <property role="3m_KjL" value="Add as Child" />
+          <property role="3m_KjL" value="Child (add target as)" />
           <ref role="3m_WZM" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <ref role="3m_MR0" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <node concept="3mAF$r" id="7eX7ySIDvUd" role="3m_MS9">
@@ -1623,7 +1624,7 @@
           </node>
         </node>
         <node concept="3mAFYk" id="JIGctjxUXg" role="1xLlFP">
-          <property role="3m_KjL" value="Add as Reference" />
+          <property role="3m_KjL" value="Reference (add target as)" />
           <ref role="3m_WZM" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <ref role="3m_MR0" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
           <node concept="3mAF$r" id="JIGctjxUXi" role="3m_MS9">
@@ -1815,6 +1816,21 @@
                     <node concept="3m_RyK" id="JIGctj_$5B" role="2Oq$k0" />
                     <node concept="3TrEf2" id="JIGctj__0E" role="2OqNvi">
                       <ref role="3Tt5mk" to="tpce:f_TJDff" resolve="extends" />
+                    </node>
+                  </node>
+                </node>
+              </node>
+              <node concept="3clFbF" id="JIGctjAFfC" role="3cqZAp">
+                <node concept="2OqwBi" id="JIGctjAH0o" role="3clFbG">
+                  <node concept="2OqwBi" id="JIGctjAFnF" role="2Oq$k0">
+                    <node concept="1Pxb5l" id="JIGctjAFfA" role="2Oq$k0" />
+                    <node concept="3Tsc0h" id="JIGctjAFyR" role="2OqNvi">
+                      <ref role="3TtcxE" to="8yb8:7eX7ySIDkTL" resolve="relations" />
+                    </node>
+                  </node>
+                  <node concept="TSZUe" id="JIGctjAKSI" role="2OqNvi">
+                    <node concept="37vLTw" id="JIGctjAL1a" role="25WWJ7">
+                      <ref role="3cqZAo" node="JIGctj_pso" resolve="cr" />
                     </node>
                   </node>
                 </node>
@@ -2534,7 +2550,6 @@
         <node concept="3clFbS" id="JIGctj_S1l" role="2VODD2">
           <node concept="3clFbF" id="JIGctj_S1m" role="3cqZAp">
             <node concept="37vLTI" id="JIGctj_Wui" role="3clFbG">
-              <node concept="10Nm6u" id="JIGctj_WuR" role="37vLTx" />
               <node concept="2OqwBi" id="JIGctj_S1o" role="37vLTJ">
                 <node concept="2OqwBi" id="JIGctj_S1p" role="2Oq$k0">
                   <node concept="1Pxb5l" id="JIGctj_S1q" role="2Oq$k0" />
@@ -2545,6 +2560,12 @@
                 <node concept="3TrEf2" id="JIGctj_U7I" role="2OqNvi">
                   <ref role="3Tt5mk" to="tpce:f_TJDff" resolve="extends" />
                 </node>
+              </node>
+              <node concept="2OqwBi" id="JIGctjB4Jx" role="37vLTx">
+                <node concept="35c_gC" id="JIGctjB4a9" role="2Oq$k0">
+                  <ref role="35c_gD" to="tpck:gw2VY9q" resolve="BaseConcept" />
+                </node>
+                <node concept="FGMqu" id="JIGctjB5rw" role="2OqNvi" />
               </node>
             </node>
           </node>
