@@ -12,16 +12,7 @@
   </imports>
   <registry>
     <language id="b99ef0c4-6283-444d-ad3b-e105b9cdd91e" name="com.dslfoundry.graphicalstructureeditor">
-      <concept id="859818949020654519" name="com.dslfoundry.graphicalstructureeditor.structure.ConceptReferenceRelation" flags="ng" index="1oq2HK">
-        <reference id="859818949020654534" name="to" index="1oq2G1" />
-        <reference id="859818949020654532" name="from" index="1oq2G3" />
-        <reference id="859818949020654537" name="linkD" index="1oq2Ge" />
-      </concept>
-      <concept id="8339855268659892618" name="com.dslfoundry.graphicalstructureeditor.structure.ConceptChildRelation" flags="ng" index="1t6oY$">
-        <reference id="859818949020517071" name="linkD" index="1oqz88" />
-        <reference id="8339855268660444151" name="to" index="1t4unp" />
-        <reference id="8339855268660444149" name="from" index="1t4unr" />
-      </concept>
+      <concept id="8339855268659892618" name="com.dslfoundry.graphicalstructureeditor.structure.ConceptChildRelation" flags="ng" index="1t6oY$" />
       <concept id="8339855268659635182" name="com.dslfoundry.graphicalstructureeditor.structure.ConceptStructureRelations" flags="ng" index="1t7rR0">
         <child id="8339855268659940977" name="relations" index="1t651v" />
       </concept>
@@ -29,7 +20,6 @@
     <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
       <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
         <property id="6714410169261853888" name="conceptId" index="EcuMT" />
-        <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
         <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
       </concept>
       <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
@@ -38,13 +28,6 @@
       <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
         <property id="241647608299431129" name="propertyId" index="IQ2nx" />
         <reference id="1082985295845" name="dataType" index="AX2Wp" />
-      </concept>
-      <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
-        <property id="1071599776563" name="role" index="20kJfa" />
-        <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
-        <property id="1071599937831" name="metaClass" index="20lmBu" />
-        <property id="241647608299431140" name="linkId" index="IQ2ns" />
-        <reference id="1071599976176" name="target" index="20lvS9" />
       </concept>
     </language>
     <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
@@ -92,12 +75,6 @@
     <property role="EcuMT" value="8339855268659592457" />
     <property role="TrG5h" value="TestConcept1" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
-    <node concept="1TJgyj" id="JIGctjydMx" role="1TKVEi">
-      <property role="IQ2ns" value="859818949020802209" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="hallo" />
-      <ref role="20lvS9" node="7eX7ySICKO4" resolve="TestConcept2" />
-    </node>
   </node>
   <node concept="1TIwiD" id="7eX7ySICKO4">
     <property role="EcuMT" value="8339855268659793156" />
@@ -107,19 +84,6 @@
       <property role="IQ2nx" value="8339855268659892614" />
       <property role="TrG5h" value="test" />
       <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
-    </node>
-    <node concept="1TJgyj" id="JIGctjydG0" role="1TKVEi">
-      <property role="IQ2ns" value="859818949020801792" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="hallo2" />
-      <property role="20lbJX" value="0..1" />
-      <ref role="20lvS9" node="7eX7ySIBZO9" resolve="TestConcept1" />
-    </node>
-    <node concept="1TJgyj" id="JIGctjzx60" role="1TKVEi">
-      <property role="IQ2ns" value="859818949021143424" />
-      <property role="20lmBu" value="aggregation" />
-      <property role="20lbJX" value="0..n" />
-      <ref role="20lvS9" node="7eX7ySIBZO9" resolve="TestConcept1" />
     </node>
   </node>
   <node concept="1t7rR0" id="7eX7ySICNB6">
@@ -137,8 +101,8 @@
       <node concept="37mRIm" id="7eX7ySID95S" role="37mRID">
         <property role="37mO49" value="8339855268659592457" />
         <node concept="gqqVs" id="7eX7ySID95Q" role="37mO4d">
-          <property role="gqqTZ" value="827.5265557344012" />
-          <property role="gqqTW" value="3.243734200332085" />
+          <property role="gqqTZ" value="896.5265557344012" />
+          <property role="gqqTW" value="-14.259514732829103" />
           <property role="gqqTX" value="479.0" />
           <property role="gqqTy" value="432.0" />
           <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
@@ -786,6 +750,36 @@
           </node>
         </node>
       </node>
+      <node concept="37mRIm" id="JIGctj_4xa" role="37mRID">
+        <property role="37mO49" value="859818949021549569" />
+        <node concept="gqqVs" id="JIGctj_4x9" role="37mO4d">
+          <property role="gqqTZ" value="306.0" />
+          <property role="gqqTW" value="17.0" />
+          <property role="gqqTX" value="479.0" />
+          <property role="gqqTy" value="432.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="JIGctj_4$m" role="37mRID">
+        <property role="37mO49" value="859818949021550868" />
+        <node concept="gqqVs" id="JIGctj_4$l" role="37mO4d">
+          <property role="gqqTZ" value="566.0" />
+          <property role="gqqTW" value="70.0" />
+          <property role="gqqTX" value="479.0" />
+          <property role="gqqTy" value="432.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
+      <node concept="37mRIm" id="JIGctj_lmo" role="37mRID">
+        <property role="37mO49" value="859818949021619606" />
+        <node concept="gqqVs" id="JIGctj_lmn" role="37mO4d">
+          <property role="gqqTZ" value="510.0" />
+          <property role="gqqTW" value="88.0" />
+          <property role="gqqTX" value="468.0" />
+          <property role="gqqTy" value="281.0" />
+          <property role="TgtnS" value="1.0;0.0;0.0;1.0;0.0;0.0" />
+        </node>
+      </node>
     </node>
     <node concept="1t6oY$" id="7eX7ySIFf8V" role="1t651v" />
     <node concept="1t6oY$" id="7eX7ySIFfFz" role="1t651v" />
@@ -793,21 +787,6 @@
     <node concept="1t6oY$" id="7eX7ySIFfFY" role="1t651v" />
     <node concept="1t6oY$" id="7eX7ySIFfGd" role="1t651v" />
     <node concept="1t6oY$" id="7eX7ySIFfGt" role="1t651v" />
-    <node concept="1oq2HK" id="JIGctjydFZ" role="1t651v">
-      <ref role="1oq2G3" node="7eX7ySICKO4" resolve="TestConcept2" />
-      <ref role="1oq2G1" node="7eX7ySIBZO9" resolve="TestConcept1" />
-      <ref role="1oq2Ge" node="JIGctjydG0" resolve="hallo2" />
-    </node>
-    <node concept="1oq2HK" id="JIGctjydMw" role="1t651v">
-      <ref role="1oq2G3" node="7eX7ySIBZO9" resolve="TestConcept1" />
-      <ref role="1oq2G1" node="7eX7ySICKO4" resolve="TestConcept2" />
-      <ref role="1oq2Ge" node="JIGctjydMx" resolve="hallo" />
-    </node>
-    <node concept="1t6oY$" id="JIGctjzx5Z" role="1t651v">
-      <ref role="1t4unr" node="7eX7ySICKO4" resolve="TestConcept2" />
-      <ref role="1t4unp" node="7eX7ySIBZO9" resolve="TestConcept1" />
-      <ref role="1oqz88" node="JIGctjzx60" />
-    </node>
   </node>
 </model>
 
