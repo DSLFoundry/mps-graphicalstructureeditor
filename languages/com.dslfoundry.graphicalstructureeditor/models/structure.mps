@@ -51,12 +51,6 @@
     <property role="EcuMT" value="8339855268659892618" />
     <property role="TrG5h" value="ConceptChildRelation" />
     <ref role="1TJDcQ" node="JIGctjxS5K" resolve="ConceptRelation" />
-    <node concept="1TJgyj" id="7eX7ySIFfJP" role="1TKVEi">
-      <property role="IQ2ns" value="8339855268660444149" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="from" />
-      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
-    </node>
     <node concept="1TJgyj" id="7eX7ySIFfJR" role="1TKVEi">
       <property role="IQ2ns" value="8339855268660444151" />
       <property role="20lmBu" value="reference" />
@@ -74,14 +68,8 @@
     <property role="EcuMT" value="859818949020654519" />
     <property role="TrG5h" value="ConceptReferenceRelation" />
     <ref role="1TJDcQ" node="JIGctjxS5K" resolve="ConceptRelation" />
-    <node concept="1TJgyj" id="JIGctjxDJ4" role="1TKVEi">
-      <property role="IQ2ns" value="859818949020654532" />
-      <property role="20lmBu" value="reference" />
-      <property role="20kJfa" value="from" />
-      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
-    </node>
-    <node concept="1TJgyj" id="JIGctjxDJ6" role="1TKVEi">
-      <property role="IQ2ns" value="859818949020654534" />
+    <node concept="1TJgyj" id="JIGctj_HPY" role="1TKVEi">
+      <property role="IQ2ns" value="859818949021719934" />
       <property role="20lmBu" value="reference" />
       <property role="20kJfa" value="to" />
       <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
@@ -98,6 +86,40 @@
     <property role="TrG5h" value="ConceptRelation" />
     <property role="R5$K7" value="true" />
     <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7eX7ySIFfJP" role="1TKVEi">
+      <property role="IQ2ns" value="8339855268660444149" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="from" />
+      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="JIGctj_qV5">
+    <property role="EcuMT" value="859818949021642437" />
+    <property role="TrG5h" value="ConceptExtendsRelation" />
+    <ref role="1TJDcQ" node="JIGctjxS5K" resolve="ConceptRelation" />
+    <node concept="1TJgyj" id="JIGctj_HPT" role="1TKVEi">
+      <property role="IQ2ns" value="859818949021719929" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="to" />
+      <ref role="20lvS9" to="tpce:f_TIwhg" resolve="ConceptDeclaration" />
+    </node>
+  </node>
+  <node concept="1TIwiD" id="JIGctj_qVV">
+    <property role="EcuMT" value="859818949021642491" />
+    <property role="TrG5h" value="ConceptImplementsRelation" />
+    <ref role="1TJDcQ" node="JIGctjxS5K" resolve="ConceptRelation" />
+    <node concept="1TJgyj" id="JIGctj_HPV" role="1TKVEi">
+      <property role="IQ2ns" value="859818949021719931" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="to" />
+      <ref role="20lvS9" to="tpce:h0PlHMJ" resolve="InterfaceConceptDeclaration" />
+    </node>
+    <node concept="1TJgyj" id="JIGctj_qVY" role="1TKVEi">
+      <property role="IQ2ns" value="859818949021642494" />
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="implRef" />
+      <ref role="20lvS9" to="tpce:h0PrWoo" resolve="InterfaceConceptReference" />
+    </node>
   </node>
 </model>
 
