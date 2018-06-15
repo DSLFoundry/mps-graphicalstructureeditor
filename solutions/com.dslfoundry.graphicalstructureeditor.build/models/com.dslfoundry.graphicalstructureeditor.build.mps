@@ -7,7 +7,6 @@
   </languages>
   <imports>
     <import index="ffeo" ref="r:874d959d-e3b4-4d04-b931-ca849af130dd(jetbrains.mps.ide.build)" />
-    <import index="p6ld" ref="r:0764bd79-eef9-46f0-a6fe-739a07a30bb2(com.mbeddr.build.build)" />
     <import index="al5i" ref="r:742f344d-4dc4-4862-992c-4bc94b094870(com.mbeddr.mpsutil.dev.build)" />
     <import index="90a9" ref="r:fb24ac52-5985-4947-bba9-25be6fd32c1a(de.slisson.mps.all.build)" />
   </imports>
@@ -29,10 +28,6 @@
         <child id="8618885170173601778" name="tail" index="2Ry0An" />
       </concept>
       <concept id="6647099934206700647" name="jetbrains.mps.build.structure.BuildJavaPlugin" flags="ng" index="10PD9b" />
-      <concept id="7389400916848050071" name="jetbrains.mps.build.structure.BuildLayout_Zip" flags="ng" index="3981dG" />
-      <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
-        <child id="4380385936562148502" name="containerName" index="Nbhlr" />
-      </concept>
       <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
         <child id="7389400916848144618" name="defaultPath" index="398pKh" />
       </concept>
@@ -101,6 +96,7 @@
       <concept id="4278635856200794926" name="jetbrains.mps.build.mps.structure.BuildMps_ModuleDependencyExtendLanguage" flags="ng" index="1Busua">
         <reference id="4278635856200794928" name="language" index="1Busuk" />
       </concept>
+      <concept id="3189788309731840247" name="jetbrains.mps.build.mps.structure.BuildMps_Solution" flags="ng" index="1E1JtA" />
       <concept id="3189788309731840248" name="jetbrains.mps.build.mps.structure.BuildMps_Language" flags="ng" index="1E1JtD">
         <child id="9200313594498201639" name="generator" index="1TViLv" />
       </concept>
@@ -137,22 +133,15 @@
         <ref role="398BVh" node="5tvzZAHK9PQ" resolve="mps_home" />
       </node>
     </node>
-    <node concept="2sgV4H" id="5tvzZAHKacH" role="1l3spa">
+    <node concept="2sgV4H" id="71Qmaky5gvV" role="1l3spa">
       <ref role="1l3spb" to="al5i:3AVJcIMlF8l" resolve="com.mbeddr.platform" />
-      <node concept="398BVA" id="5tvzZAHKacY" role="2JcizS">
+      <node concept="398BVA" id="71Qmaky5gwd" role="2JcizS">
         <ref role="398BVh" node="5tvzZAHK9PU" resolve="plugins" />
       </node>
     </node>
     <node concept="1l3spV" id="5tvzZAHK9Qb" role="1l3spN">
-      <node concept="3981dG" id="5tvzZAHK9Qc" role="39821P">
-        <node concept="3_J27D" id="5tvzZAHK9Qd" role="Nbhlr">
-          <node concept="3Mxwew" id="5tvzZAHK9Qe" role="3MwsjC">
-            <property role="3MwjfP" value="com.dslfoundry.graphicalstructureeditor.zip" />
-          </node>
-        </node>
-        <node concept="m$_wl" id="5tvzZAHK9Qf" role="39821P">
-          <ref role="m_rDy" node="5tvzZAHK9Q2" resolve="com.dslfoundry.graphicalstructureeditor" />
-        </node>
+      <node concept="m$_wl" id="5tvzZAHK9Qf" role="39821P">
+        <ref role="m_rDy" node="5tvzZAHK9Q2" resolve="com.dslfoundry.graphicalstructureeditor" />
       </node>
     </node>
     <node concept="m$_wf" id="5tvzZAHK9Q2" role="3989C9">
@@ -258,10 +247,45 @@
           <property role="3LESm3" value="d12d9d3d-10c7-4215-be02-99a30c3370f7" />
           <property role="2GAjPV" value="false" />
         </node>
-        <node concept="1SiIV0" id="5tvzZAHKadZ" role="3bR37C">
-          <node concept="3bR9La" id="5tvzZAHKae0" role="1SiIV1">
+        <node concept="1SiIV0" id="71Qmaky5gws" role="3bR37C">
+          <node concept="3bR9La" id="71Qmaky5gwt" role="1SiIV1">
             <property role="3bR36h" value="false" />
             <ref role="3bR37D" to="90a9:4be$WTb1AQa" resolve="de.itemis.mps.editor.diagram.runtime" />
+          </node>
+        </node>
+      </node>
+      <node concept="1E1JtA" id="71Qmaky593h" role="2G$12L">
+        <property role="BnDLt" value="true" />
+        <property role="TrG5h" value="com.dslfoundry.graphicalstructureeditor.build" />
+        <property role="3LESm3" value="a6dbe14f-1907-4543-8716-ea4eb7227160" />
+        <property role="2GAjPV" value="false" />
+        <node concept="55IIr" id="71Qmaky593k" role="3LF7KH">
+          <node concept="2Ry0Ak" id="71Qmaky594k" role="iGT6I">
+            <property role="2Ry0Am" value="solutions" />
+            <node concept="2Ry0Ak" id="71Qmaky594F" role="2Ry0An">
+              <property role="2Ry0Am" value="com.dslfoundry.graphicalstructureeditor.build" />
+              <node concept="2Ry0Ak" id="71Qmaky5952" role="2Ry0An">
+                <property role="2Ry0Am" value="com.dslfoundry.graphicalstructureeditor.build.msd" />
+              </node>
+            </node>
+          </node>
+        </node>
+        <node concept="1SiIV0" id="71Qmaky595o" role="3bR37C">
+          <node concept="3bR9La" id="71Qmaky595p" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="ffeo:78GwwOvB3tw" resolve="jetbrains.mps.ide.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="71Qmaky5gwB" role="3bR37C">
+          <node concept="3bR9La" id="71Qmaky5gwC" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="90a9:2Xjt3l5bx_L" resolve="de.slisson.mps.all.build" />
+          </node>
+        </node>
+        <node concept="1SiIV0" id="71Qmaky5gwD" role="3bR37C">
+          <node concept="3bR9La" id="71Qmaky5gwE" role="1SiIV1">
+            <property role="3bR36h" value="false" />
+            <ref role="3bR37D" to="al5i:7Pr7tifzlku" resolve="com.mbeddr.platform" />
           </node>
         </node>
       </node>
