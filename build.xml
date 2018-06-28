@@ -20,7 +20,7 @@
   <property name="com.mbeddr.platform.minor.version" value="${import.com.mbeddr.platform.com.mbeddr.platform.minor.version}" />
   <property name="com.mbeddr.platform.build" value="${import.com.mbeddr.platform.com.mbeddr.platform.build}" />
   <property name="com.mbeddr.platform.mbeddr.version" value="${import.com.mbeddr.platform.com.mbeddr.platform.mbeddr.version}" />
-  <property name="mps-sl-all.versionNumber" value="${import.com.mbeddr.platform.mps-sl-all.versionNumber}" />
+  <property name="de.itemis.mps.extensions.versionNumber" value="${import.com.mbeddr.platform.de.itemis.mps.extensions.versionNumber}" />
   <property name="environment" value="env" />
   <property name="env.JAVA_HOME" value="${java.home}/.." />
   <property name="jdk.home" value="${env.JAVA_HOME}" />
@@ -32,11 +32,9 @@
   </path>
   
   <target name="assemble" depends="classes, declare-mps-tasks">
-    <mkdir dir="${build.layout}" />
-    <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip" />
-    <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor" />
-    <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/META-INF" />
-    <echoxml file="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/META-INF/plugin.xml">
+    <mkdir dir="${build.layout}/com.dslfoundry.graphicalstructureeditor" />
+    <mkdir dir="${build.layout}/com.dslfoundry.graphicalstructureeditor/META-INF" />
+    <echoxml file="${build.layout}/com.dslfoundry.graphicalstructureeditor/META-INF/plugin.xml">
       <idea-plugin xmlns:xi="http://www.w3.org/2001/XInclude">
         <id>com.dslfoundry.graphicalstructureeditor</id>
         <name>com.dslfoundry.graphicalstructureeditor</name>
@@ -46,14 +44,15 @@
         <depends>jetbrains.mps.core</depends>
         <depends>com.mbeddr.platform</depends>
         <depends>de.slisson.mps.all</depends>
+        <depends>de.itemis.mps.editor.diagram</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
         </extensions>
       </idea-plugin>
     </echoxml>
-    <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/languages" />
-    <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor" />
+    <mkdir dir="${build.layout}/com.dslfoundry.graphicalstructureeditor/languages" />
+    <mkdir dir="${build.layout}/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor" />
     <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.jar" />
     <mkdir dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.jar/META-INF" />
     <echoxml file="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.jar/META-INF/module.xml">
@@ -67,7 +66,6 @@
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="94b17d5e-87d9-4868-8101-157e83e33243(com.mbeddr.mpsutil.editor.querylist.runtime)" />
           <module ref="1144260c-e9a5-49a2-9add-39a1a1a7077e(de.itemis.mps.editor.diagram.runtime)" />
-          <module ref="776efd50-4c6d-4d39-90b3-7f994c98f819(de.itemis.mps.editor.layout.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
@@ -83,7 +81,7 @@
         <sources jar="com.dslfoundry.graphicalstructureeditor-src.jar" descriptor="com.dslfoundry.graphicalstructureeditor.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.dslfoundry.graphicalstructureeditor" />
       <fileset dir="${basedir}/languages/com.dslfoundry.graphicalstructureeditor/source_gen" includes="**/trace.info, **/exports, **/*.mps, **/checkpoints" />
       <fileset dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.jar" />
@@ -110,7 +108,7 @@
         <sources jar="com.dslfoundry.graphicalstructureeditor-src.jar" descriptor="com.dslfoundry.graphicalstructureeditor.mpl" />
       </module>
     </echoxml>
-    <jar destfile="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-generator.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-generator.jar" duplicate="preserve">
       <fileset dir="${build.tmp}/java/out/com.dslfoundry.graphicalstructureeditor#8339855268659592396" />
       <fileset dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor-generator.jar" />
     </jar>
@@ -120,7 +118,7 @@
     <copyModels todir="${build.tmp}/customProcessors/copyModels/languages-com.dslfoundry.graphicalstructureeditor-models">
       <fileset dir="${basedir}/languages/com.dslfoundry.graphicalstructureeditor/models" includes="**/*.mps, **/*.metadata, **/*.history, **/*.mpsr, **/.model" />
     </copyModels>
-    <jar destfile="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-src.jar" duplicate="preserve">
+    <jar destfile="${build.layout}/com.dslfoundry.graphicalstructureeditor/languages/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-src.jar" duplicate="preserve">
       <fileset dir="${basedir}/languages/com.dslfoundry.graphicalstructureeditor/generator/source_gen">
         <exclude name="**/trace.info" />
         <exclude name="**/exports" />
@@ -137,10 +135,7 @@
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.dslfoundry.graphicalstructureeditor-generator-template" prefix="module/generator/template" />
       <zipfileset dir="${build.tmp}/customProcessors/copyModels/languages-com.dslfoundry.graphicalstructureeditor-models" prefix="module/models" />
     </jar>
-    <zip destfile="${build.layout}/com.dslfoundry.graphicalstructureeditor.zip">
-      <fileset dir="${build.tmp}/default/com.dslfoundry.graphicalstructureeditor.zip" />
-    </zip>
-    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}mps-sl-all.versionNumber=${mps-sl-all.versionNumber}</echo>
+    <echo file="${build.layout}/build.properties">mps.build.number=${mps.build.number}${line.separator}mps.date=${mps.date}${line.separator}mps.build.vcs.number=${mps.build.vcs.number}${line.separator}mps.teamcity.buildConfName=${mps.teamcity.buildConfName}${line.separator}mps.idea.platform.build.number=${mps.idea.platform.build.number}${line.separator}mps.mps.build.counter=${mps.mps.build.counter}${line.separator}mpsBootstrapCore.version=${mpsBootstrapCore.version}${line.separator}com.mbeddr.platform.major.version=${com.mbeddr.platform.major.version}${line.separator}com.mbeddr.platform.minor.version=${com.mbeddr.platform.minor.version}${line.separator}com.mbeddr.platform.build=${com.mbeddr.platform.build}${line.separator}com.mbeddr.platform.mbeddr.version=${com.mbeddr.platform.mbeddr.version}${line.separator}de.itemis.mps.extensions.versionNumber=${de.itemis.mps.extensions.versionNumber}</echo>
   </target>
   
   <target name="buildDependents" />
@@ -169,26 +164,27 @@
     <generate strictMode="true" parallelMode="true" parallelThreads="8" useInplaceTransform="false" hideWarnings="false" createStaticRefs="true" fork="true">
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.common" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker" />
-      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.grammarcells" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.infrastructure.misc" />
+      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.jung" />
+      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.plantuml" />
+      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.suppresswarning" />
       <plugin path="${artifacts.com.mbeddr.platform}/de-itemis-mps-selection" />
+      <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.blutil" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram" />
-      <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.layout" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips" />
+      <plugin path="${artifacts.com.mbeddr.platform}/de.itemis.mps.utils" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.all" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.conditionalEditor" />
       <plugin path="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks" />
-      <plugin path="${artifacts.com.mbeddr.platform}/mbeddr.mpsutil" />
       <plugin path="${artifacts.com.mbeddr.platform}/mbeddr.platform" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-apache-commons" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-multiline" />
       <plugin path="${artifacts.com.mbeddr.platform}/mps-richtext" />
+      <plugin path="${artifacts.mps}/plugins/http-support" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core/META-INF/plugin.xml/../.." />
-      <plugin path="${artifacts.mps}/plugins/mps-debugger-api" />
-      <plugin path="${artifacts.mps}/plugins/mps-execution-api" />
       <plugin path="${artifacts.mps}/plugins/mps-testing" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist/languages/group.editor.querylist/com.mbeddr.mpsutil.editor.querylist.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist/languages/group.editor.querylist/com.mbeddr.mpsutil.editor.querylist.runtime.jar" />
@@ -199,16 +195,13 @@
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.layout.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.styles.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.layout/languages/de.itemis.mps.editor.miglayout/de.itemis.mps.editor.layout.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.layout/languages/de.itemis.mps.editor.miglayout/de.itemis.mps.editor.layout.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
+      <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.hints.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.conditionalEditor/languages/de.slisson.mps.conditionalEditor/de.slisson.mps.conditionalEditor.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
       <library file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.reflection.runtime.jar" />
-      <library file="${artifacts.com.mbeddr.platform}/mps-apache-commons/languages/mps-apache-commons/org.apache.commons.jar" />
+      <library file="${artifacts.com.mbeddr.platform}/mps-apache-commons/languages/mps-apache-commons-math/org.apache.commons.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.blTypes.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.classifiers.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.closures.jar" />
@@ -251,13 +244,13 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.intentions.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.migration.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.migration.runtime.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.modelapi.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.pattern.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.plugin.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.project.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.quotation.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.refactoring.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.resources.jar" />
-      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.script.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
@@ -329,22 +322,22 @@
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.6.2.jar" />
+        <fileset file="${artifacts.mps}/lib/ecj-4.7.2.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist/languages/group.editor.querylist/com.mbeddr.mpsutil.editor.querylist.runtime.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.runtime.jar" />
+        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.celllayout/languages/de.itemis.mps.celllayout/de.itemis.mps.editor.celllayout.styles.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.editor.collapsible.runtime.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.runtime.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/languages/de.itemis.mps.editor.diagram/de.itemis.mps.editor.diagram.styles.jar" />
-        <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.layout/languages/de.itemis.mps.editor.miglayout/de.itemis.mps.editor.layout.runtime.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.widgets/languages/de.itemis.mps.editor.widgets/de.itemis.mps.mouselistener.runtime.jar" />
         <fileset file="${artifacts.com.mbeddr.platform}/de.itemis.mps.tooltips/languages/de.itemis.mps.tooltips/de.itemis.mps.tooltips.runtime.jar" />
+        <fileset file="${artifacts.com.mbeddr.platform}/de.slisson.mps.hacks/languages/de.slisson.mps.hacks/de.slisson.mps.hacks.editor.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.scopes.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.descriptor.aspects.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="jgraphx.jar" />
@@ -352,7 +345,6 @@
         <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="libavoid/adaptagrams.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.layout/lib" includes="miglayout-core-4.2.jar" />
       </classpath>
     </javac>
   </target>
@@ -387,11 +379,10 @@
         <fileset file="${artifacts.mps}/lib/log4j.jar" />
         <fileset file="${artifacts.mps}/lib/jdom.jar" />
         <fileset file="${artifacts.mps}/lib/trove4j.jar" />
-        <fileset file="${artifacts.mps}/lib/ecj-4.6.2.jar" />
+        <fileset file="${artifacts.mps}/lib/ecj-4.7.2.jar" />
         <fileset dir="${artifacts.mps}/lib" includes="*.jar" />
         <fileset file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.core.jar" />
-        <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.scopes.runtime.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
       </classpath>
     </javac>

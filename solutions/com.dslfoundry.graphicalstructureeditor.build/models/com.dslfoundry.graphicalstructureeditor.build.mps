@@ -29,10 +29,6 @@
         <child id="8618885170173601778" name="tail" index="2Ry0An" />
       </concept>
       <concept id="6647099934206700647" name="jetbrains.mps.build.structure.BuildJavaPlugin" flags="ng" index="10PD9b" />
-      <concept id="7389400916848050071" name="jetbrains.mps.build.structure.BuildLayout_Zip" flags="ng" index="3981dG" />
-      <concept id="7389400916848050060" name="jetbrains.mps.build.structure.BuildLayout_NamedContainer" flags="ng" index="3981dR">
-        <child id="4380385936562148502" name="containerName" index="Nbhlr" />
-      </concept>
       <concept id="7389400916848136194" name="jetbrains.mps.build.structure.BuildFolderMacro" flags="ng" index="398rNT">
         <child id="7389400916848144618" name="defaultPath" index="398pKh" />
       </concept>
@@ -144,15 +140,8 @@
       </node>
     </node>
     <node concept="1l3spV" id="5tvzZAHK9Qb" role="1l3spN">
-      <node concept="3981dG" id="5tvzZAHK9Qc" role="39821P">
-        <node concept="3_J27D" id="5tvzZAHK9Qd" role="Nbhlr">
-          <node concept="3Mxwew" id="5tvzZAHK9Qe" role="3MwsjC">
-            <property role="3MwjfP" value="com.dslfoundry.graphicalstructureeditor.zip" />
-          </node>
-        </node>
-        <node concept="m$_wl" id="5tvzZAHK9Qf" role="39821P">
-          <ref role="m_rDy" node="5tvzZAHK9Q2" resolve="com.dslfoundry.graphicalstructureeditor" />
-        </node>
+      <node concept="m$_wl" id="5tvzZAHK9Qf" role="39821P">
+        <ref role="m_rDy" node="5tvzZAHK9Q2" resolve="com.dslfoundry.graphicalstructureeditor" />
       </node>
     </node>
     <node concept="m$_wf" id="5tvzZAHK9Q2" role="3989C9">
@@ -178,6 +167,9 @@
       </node>
       <node concept="m$_yC" id="5tvzZAHKai1" role="m$_yJ">
         <ref role="m$_y1" to="90a9:4hvHh3QW$Eh" resolve="de.slisson.mps.all" />
+      </node>
+      <node concept="m$_yC" id="6toSDGBGjdF" role="m$_yJ">
+        <ref role="m$_y1" to="90a9:4be$WTb1MZD" resolve="de.itemis.mps.editor.diagram" />
       </node>
       <node concept="3_J27D" id="5tvzZAHK9Q9" role="m_cZH">
         <node concept="3Mxwew" id="5tvzZAHK9Qa" role="3MwsjC">
