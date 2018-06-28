@@ -45,6 +45,7 @@
         <depends>com.mbeddr.platform</depends>
         <depends>de.slisson.mps.all</depends>
         <depends>de.itemis.mps.editor.diagram</depends>
+        <depends>com.mbeddr.mpsutil.editor.querylist</depends>
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -163,6 +164,7 @@
     <echo message="generating" />
     <generate strictMode="true" parallelMode="true" parallelThreads="8" useInplaceTransform="false" hideWarnings="false" createStaticRefs="true" fork="true">
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.common" />
+      <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.filepicker" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.infrastructure.misc" />
       <plugin path="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.jung" />

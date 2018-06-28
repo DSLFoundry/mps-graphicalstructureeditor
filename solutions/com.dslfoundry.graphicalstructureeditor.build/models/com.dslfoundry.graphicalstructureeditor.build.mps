@@ -171,6 +171,9 @@
       <node concept="m$_yC" id="6toSDGBGjdF" role="m$_yJ">
         <ref role="m$_y1" to="90a9:4be$WTb1MZD" resolve="de.itemis.mps.editor.diagram" />
       </node>
+      <node concept="m$_yC" id="6toSDGBGrGO" role="m$_yJ">
+        <ref role="m$_y1" to="al5i:6hpTCZQdXQX" resolve="com.mbeddr.mpsutil.editor.querylist" />
+      </node>
       <node concept="3_J27D" id="5tvzZAHK9Q9" role="m_cZH">
         <node concept="3Mxwew" id="5tvzZAHK9Qa" role="3MwsjC">
           <property role="3MwjfP" value="com.dslfoundry.graphicalstructureeditor" />
