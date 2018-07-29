@@ -39,13 +39,14 @@
         <id>com.dslfoundry.graphicalstructureeditor</id>
         <name>com.dslfoundry.graphicalstructureeditor</name>
         <description>A graphical editor for the structure aspect of MPS languages</description>
-        <version>1.0</version>
+        <version>2018.1</version>
         <vendor url="http://dslfoundry.com/">DSLFoundry</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>com.mbeddr.platform</depends>
         <depends>de.slisson.mps.all</depends>
         <depends>de.itemis.mps.editor.diagram</depends>
         <depends>com.mbeddr.mpsutil.editor.querylist</depends>
+        <idea-version until-build="182.1" since-build="181.1" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
