@@ -12,5 +12,5 @@ deploy:
   file: "build/artifacts/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-MPS-2018.1.zip"
   skip_cleanup: true
   on:
-    repo: DSLFoundry/mps-plaintextgen
+    repo: DSLFoundry/mps-graphicalstructureeditor
     tags: true
