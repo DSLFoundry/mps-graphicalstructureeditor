@@ -13,6 +13,8 @@ deploy:
   provider: releases
   api_key:
     secure: hvME+kqzfddsMf+OHR8rm/MNOmcemi88T5YgZI9pOZ+4OJTYI8Y/6EsNGV+c9aVcj7MdkkAIAG3jLqh3pyfxj276gaKIywBrt3ZIc8lrKEmfyKzOgnT8WngTK4uYfJckD3orN/qnOAluQUFgO2il+DmI4Fi1r4e2hVuGgGX2dcUwftfoXmtfZXsK/aMo55syHbn6mXRjLHKXdSl6Vpru2JCVEcNs+ahyXOyiCEWAnXsSw0V3+KQrnRuezh/Yg43h1RcHiwlncOikeRkZPq1bOf7Kbst6OzsKz60xG1ZpLTIVIz6THU5sECCNTM0rhqBLAKZLeSi902Sn7/LDsO5cN5J+65nVjC8/B5Iyf4cOkZqtQezs+6IQ9Y8K6V+htehG5iMLlYNAmqU684xPxTd0m9c+JYv+GFYJksWXVuI7+LduvnjSC65NWqNnuyKfWtE6a1/Yga+zG2yqNSrGsm+NM9G/8hFLz7ZKPgSmx9Yaf2PUAQw4Y7bBmgS52klVMQCmTuGWENL+5hCtTgJAeeS+xAj7DTg6BddbuT7L8MGpEiIbiO0yFIOPPs7t2BkqST99MduXmS9GX69eudODb4Do7A2dUPG+H64w9B5ShHsmpPt9KeVxbmYyMKcRJQbGr9eyRJO4SGFUsyTTSCnxUsrUG00QE5N0HnprEnevJK8LVqs=
-  file: build/artifacts/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-MPS-2018.1.zip
+  file: "build/artifacts/com.dslfoundry.graphicalstructureeditor/com.dslfoundry.graphicalstructureeditor-MPS-2018.1.zip"
+  skip_cleanup: true
   on:
     repo: DSLFoundry/mps-graphicalstructureeditor
+    tags: true
