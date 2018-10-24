@@ -58,7 +58,7 @@
         <depends>de.itemis.mps.editor.diagram</depends>
         <depends>com.mbeddr.mpsutil.editor.querylist</depends>
         <depends>com.mbeddr.build</depends>
-        <idea-version until-build="182.1" since-build="181.1" />
+        <idea-version until-build="183.1" since-build="182.1" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
