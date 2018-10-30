@@ -50,7 +50,7 @@
         <id>com.dslfoundry.graphicalstructureeditor</id>
         <name>com.dslfoundry.graphicalstructureeditor</name>
         <description>A graphical editor for the structure aspect of MPS languages</description>
-        <version>2018.1</version>
+        <version>2018.2</version>
         <vendor url="http://dslfoundry.com/">DSLFoundry</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>com.mbeddr.platform.build</depends>
