@@ -1,7 +1,7 @@
 language: java
 jdk:
 - oraclejdk8
-before_install: wget http://download.jetbrains.com/mps/2018.3/MPS-2018.3.zip; wget https://github.com/mbeddr/mbeddr.core/releases/download/nightly-606/com.mbeddr.allInOne-1.0.20825.50f6db2-MPS-2018.3.4.zip
+before_install: wget http://download.jetbrains.com/mps/2018.3/MPS-2018.3.zip; wget https://github.com/mbeddr/mbeddr.core/releases/download/nightly-618/com.mbeddr.allInOne-1.2.21164.97bc7bf-MPS-2018.3.2.zip
 install: unzip MPS-2018.3.zip; cd MPS\ 2018.3; unzip -o ../com.mbeddr.allInOne-1.2.21164.97bc7bf-MPS-2018.3.2.zip;
   cd ..
 script: ant -Dmps_home=./MPS\ 2018.3 clean generate assemble
