@@ -3,7 +3,7 @@
   <persistence version="9" />
   <languages>
     <use id="798100da-4f0a-421a-b991-71f8c50ce5d2" name="jetbrains.mps.build" version="-1" />
-    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="-1" />
+    <use id="0cf935df-4699-4e9c-a132-fa109541cba3" name="jetbrains.mps.build.mps" version="7" />
     <use id="479c7a8c-02f9-43b5-9139-d910cb22f298" name="jetbrains.mps.core.xml" version="-1" />
   </languages>
   <imports>
@@ -92,10 +92,12 @@
       </concept>
       <concept id="6592112598314498926" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_Plugin" flags="ng" index="m$_wl">
         <reference id="6592112598314801433" name="plugin" index="m_rDy" />
+        <child id="3570488090019868128" name="packagingType" index="pUk7w" />
       </concept>
       <concept id="6592112598314499027" name="jetbrains.mps.build.mps.structure.BuildMps_IdeaPluginDependency" flags="ng" index="m$_yC">
         <reference id="6592112598314499066" name="target" index="m$_y1" />
       </concept>
+      <concept id="3570488090019868065" name="jetbrains.mps.build.mps.structure.BuildMpsLayout_AutoPluginLayoutType" flags="ng" index="pUk6x" />
       <concept id="1500819558095907805" name="jetbrains.mps.build.mps.structure.BuildMps_Group" flags="ng" index="2G$12M">
         <child id="1500819558095907806" name="modules" index="2G$12L" />
       </concept>
@@ -164,6 +166,7 @@
     <node concept="1l3spV" id="5tvzZAHK9Qb" role="1l3spN">
       <node concept="m$_wl" id="5tvzZAHK9Qf" role="39821P">
         <ref role="m_rDy" node="5tvzZAHK9Q2" resolve="com.dslfoundry.graphicalstructureeditor" />
+        <node concept="pUk6x" id="1rMlukyz7Vp" role="pUk7w" />
       </node>
     </node>
     <node concept="m$_wf" id="5tvzZAHK9Q2" role="3989C9">
@@ -173,13 +176,13 @@
         <node concept="2pNUuL" id="2aMbqeN3MX5" role="2pNNFR">
           <property role="2pNUuO" value="until-build" />
           <node concept="2pMdtt" id="2aMbqeN3MXg" role="2pMdts">
-            <property role="2pMdty" value="183.1" />
+            <property role="2pMdty" value="184.1" />
           </node>
         </node>
         <node concept="2pNUuL" id="2aMbqeN3MXk" role="2pNNFR">
           <property role="2pNUuO" value="since-build" />
           <node concept="2pMdtt" id="2aMbqeN3MXx" role="2pMdts">
-            <property role="2pMdty" value="182.1" />
+            <property role="2pMdty" value="183.1" />
           </node>
         </node>
       </node>
@@ -190,7 +193,7 @@
       </node>
       <node concept="3_J27D" id="5tvzZAHK9Q5" role="m$_w8">
         <node concept="3Mxwew" id="5tvzZAHK9Q6" role="3MwsjC">
-          <property role="3MwjfP" value="2018.2" />
+          <property role="3MwjfP" value="2018.3" />
         </node>
       </node>
       <node concept="m$f5U" id="5tvzZAHK9Q7" role="m$_yh">

@@ -50,7 +50,7 @@
         <id>com.dslfoundry.graphicalstructureeditor</id>
         <name>com.dslfoundry.graphicalstructureeditor</name>
         <description>A graphical editor for the structure aspect of MPS languages</description>
-        <version>2018.2</version>
+        <version>2018.3</version>
         <vendor url="http://dslfoundry.com/">DSLFoundry</vendor>
         <depends>jetbrains.mps.core</depends>
         <depends>com.mbeddr.platform.build</depends>
@@ -58,7 +58,7 @@
         <depends>de.itemis.mps.editor.diagram</depends>
         <depends>com.mbeddr.mpsutil.editor.querylist</depends>
         <depends>com.mbeddr.build</depends>
-        <idea-version until-build="183.1" since-build="182.1" />
+        <idea-version until-build="184.1" since-build="183.1" />
         
         <extensions defaultExtensionNs="com.intellij">
           <mps.LanguageLibrary dir="/languages" />
@@ -80,7 +80,9 @@
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="94b17d5e-87d9-4868-8101-157e83e33243(com.mbeddr.mpsutil.editor.querylist.runtime)" />
           <module ref="1144260c-e9a5-49a2-9add-39a1a1a7077e(de.itemis.mps.editor.diagram.runtime)" />
+          <module ref="f0fff802-6d26-4d2e-b89d-391357265626(de.slisson.mps.hacks.editor)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="2af156ab-65c1-4a62-bd0d-ea734f71eab6(jetbrains.mps.dataFlow.runtime)" />
           <module ref="34e84b8f-afa8-4364-abcd-a279fddddbe7(jetbrains.mps.editor.runtime)" />
@@ -111,6 +113,7 @@
           <module ref="4c6a28d1-2c60-478d-b36e-db9b3cbb21fb(closures.runtime)" />
           <module ref="9b80526e-f0bf-4992-bdf5-cee39c1833f3(collections.runtime)" />
           <module ref="a3e4657f-a76c-45bb-bbda-c764596ecc65(jetbrains.mps.baseLanguage.logging.runtime)" />
+          <module ref="52b81ac7-93fd-4e9e-b972-4995882da6d4(jetbrains.mps.baseLanguage.references.runtime)" />
           <module ref="d44dab97-aaac-44cb-9745-8a14db674c03(jetbrains.mps.baseLanguage.tuples.runtime)" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac5(jetbrains.mps.lang.behavior.api)" />
           <module ref="d936855b-48da-4812-a8a0-2bfddd633ac4(jetbrains.mps.lang.behavior.runtime)" />
@@ -183,7 +186,10 @@
   
   <target name="buildDependents" />
   
-  <target name="fetchDependencies" />
+  <target name="fetchDependencies">
+    <mkdir dir="${build.tmp}/deps/mpsWorkbench/mps-workbench.jar" />
+    <unzip src="${artifacts.mps}/lib/mps-workbench.jar" dest="${build.tmp}/deps/mpsWorkbench/mps-workbench.jar" />
+  </target>
   
   <target name="build" depends="assemble" />
   
@@ -219,6 +225,13 @@
       <plugin path="${artifacts.mbeddr}/mbeddr.build" />
       <plugin path="${artifacts.mps}/plugins/mps-build" />
       <plugin path="${artifacts.mps}/plugins/mps-core/META-INF/plugin.xml/../.." />
+      <plugin path="${artifacts.mps}/plugins/mps-debugger-api" />
+      <plugin path="${artifacts.mps}/plugins/mps-debugger-java" />
+      <plugin path="${artifacts.mps}/plugins/mps-execution-api" />
+      <plugin path="${artifacts.mps}/plugins/mps-execution-configurations" />
+      <plugin path="${artifacts.mps}/plugins/mps-execution-languages" />
+      <plugin path="${artifacts.mps}/plugins/mps-testing" />
+      <plugin path="${build.tmp}/deps/mpsWorkbench/mps-workbench.jar/META-INF/plugin.xml/../.." />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist/languages/group.editor.querylist/com.mbeddr.mpsutil.editor.querylist.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.mpsutil.editor.querylist/languages/group.editor.querylist/com.mbeddr.mpsutil.editor.querylist.runtime.jar" />
       <library file="${artifacts.com.mbeddr.platform}/com.mbeddr.platform.jar" />
@@ -246,6 +259,7 @@
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.javadoc.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jdk7.jar" />
+      <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.jdk8.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.logging.runtime.jar" />
       <library file="${artifacts.mps}/languages/baseLanguage/jetbrains.mps.baseLanguage.regexp.jar" />
@@ -291,13 +305,12 @@
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.script.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.sharedConcepts.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.jar" />
+      <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.smodel.query.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.textGen.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.typesystem.jar" />
       <library file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.refactoring.participant.jar" />
-      <library file="${artifacts.mps}/languages/make/jetbrains.mps.make.reduced.jar" />
-      <library file="${artifacts.mps}/languages/make/jetbrains.mps.tool.gentest.jar" />
       <library file="${artifacts.mps}/languages/text/jetbrains.mps.lang.text.jar" />
       <library file="${artifacts.mps}/languages/xml/jetbrains.mps.core.xml.jar" />
       <library file="${artifacts.mps}/lib/mps-behavior-api.jar" />
@@ -309,9 +322,7 @@
       <library file="${artifacts.mps}/lib/mps-environment.jar" />
       <library file="${artifacts.mps}/lib/mps-openapi.jar" />
       <library file="${artifacts.mps}/lib/mps-platform.jar" />
-      <library file="${artifacts.mps}/lib/mps-stubs.jar" />
-      <library file="${artifacts.mps}/lib/mps-test.jar" />
-      <library file="${artifacts.mps}/lib/mps-tool.jar" />
+      <library file="${artifacts.mps}/lib/mps-references.jar" />
       <library file="${artifacts.mps}/lib/mps-tuples.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.jar" />
       <library file="${artifacts.mps}/plugins/mps-build/languages/build/jetbrains.mps.build.mps.jar" />
@@ -354,6 +365,7 @@
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
         <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />
@@ -384,10 +396,24 @@
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.structure.jar" />
         <fileset file="${artifacts.mps}/languages/languageDesign/jetbrains.mps.lang.traceable.jar" />
         <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="jgraphx.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="klay-emf_2014-05.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="KIELER/org.adaptagrams-0.1.0-SNAPSHOT.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="KIELER/de.cau.cs.kieler.kiml.libavoid-0.1.0-SNAPSHOT.jar" />
-        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="libavoid/adaptagrams.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.emf.ecore-2.15.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.emf.common-2.15.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.common-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.disco-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.force-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.graphviz.dot-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.graphviz.layouter-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.layered-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.mrtree-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.radial-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.spore-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.core-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.core.meta-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.graph-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.graph.json-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.graph.text-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.graph.text.ide-0.4.0.jar" />
+        <fileset dir="${artifacts.com.mbeddr.platform}/de.itemis.mps.editor.diagram/lib" includes="org.eclipse.elk.alg.common.compaction-0.3.0.jar" />
       </classpath>
     </javac>
   </target>
@@ -410,6 +436,7 @@
         <fileset file="${artifacts.mps}/lib/mps-core.jar" />
         <fileset file="${artifacts.mps}/lib/mps-logging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-tuples.jar" />
+        <fileset file="${artifacts.mps}/lib/mps-references.jar" />
         <fileset file="${artifacts.mps}/lib/mps-messaging.jar" />
         <fileset file="${artifacts.mps}/lib/mps-boot-util.jar" />
         <fileset file="${artifacts.mps}/lib/mps-editor.jar" />

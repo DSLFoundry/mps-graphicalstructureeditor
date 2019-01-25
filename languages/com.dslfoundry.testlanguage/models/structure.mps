@@ -2,7 +2,7 @@
 <model ref="r:0fe233f1-197c-47ee-97ab-53590638c9ab(com.dslfoundry.testlanguage.structure)">
   <persistence version="9" />
   <languages>
-    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="6" />
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="7" />
     <use id="b99ef0c4-6283-444d-ad3b-e105b9cdd91e" name="com.dslfoundry.graphicalstructureeditor" version="0" />
     <use id="8ca79d43-eb45-4791-bdd4-0d6130ff895b" name="de.itemis.mps.editor.diagram.layout" version="0" />
     <devkit ref="78434eb8-b0e5-444b-850d-e7c4ad2da9ab(jetbrains.mps.devkit.aspect.structure)" />
